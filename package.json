@@ -1,5 +1,5 @@
 {
-  "name": "roots-nordeste-backend",
+  "name": "raizes-nordeste-backend",
   "version": "1.0.0",
   "description": "MVP Raizes do Nordeste",
   "main": "dist/server.js",
