@@ -37,7 +37,7 @@
       "response": []
     },
     {
-      "name": "2.Criar pedido",
+      "name": "2.Criar pedido APP",
       "request": {
         "method": "POST",
         "header": [],
@@ -131,7 +131,137 @@
       "response": []
     },
     {
-      "name": "5. Erro 400 Bad request",
+      "name": "5. Criar Pedido TOTEM",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "6. Atualizar Status",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"status\": \"PRONTO\" }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/pedidos/1/status",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "pedidos",
+            "1",
+            "status"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "7. Erro 401 Token",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"canalPedido\": \"WEB\", \"total\": 15.00 }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/pedidos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "pedidos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "8.  Erro 404 ID",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "\r\n{ \"status\": \"PRONTO\" }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/pedidos/9999/status",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "pedidos",
+            "9999",
+            "status"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "9. Erro 403 Perfil",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicGVyZmlsIjoiQ0xJRU5URSIsImlhdCI6MTc3ODgwNjI1OSwiZXhwIjoxNzc4ODEzNDU5fQ.1VJxw3F1RFVpQPhu9b-KVtosSYMYKrsqZzSvPyR5MOs",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/pedidos/1/status",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "pedidos",
+            "1",
+            "status"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "10. Erro 400 Bad request",
       "request": {
         "method": "POST",
         "header": [],
