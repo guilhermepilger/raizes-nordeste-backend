@@ -12,6 +12,7 @@ Tecnologias utilizadas:
 - SQLite
 - JWT
 - BcryptJS
+- Swagger (com auto-gen)
 Escolhi utilizar SQLite por ser mais simples e leve para rodar localmente e facilitar os testes do MVP.
 
 Estrutura do projeto:
