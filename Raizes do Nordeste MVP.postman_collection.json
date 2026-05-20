@@ -67,11 +67,21 @@
     {
       "name": "3. Pagamento Aprovado Mock",
       "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwicGVyZmlsIjoiR0VSRU5URSIsImlhdCI6MTc3OTIyNzI3NSwiZXhwIjoxNzc5MjM0NDc1fQ.Oypzm1IyR7EEj95PPktVGJeukTBuO_4cLMuPCgOGf2Y",
+              "type": "string"
+            }
+          ]
+        },
         "method": "POST",
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"pedidoId\": 1,\r\n  \"statusPagamento\": \"APROVADO\"\r\n}",
+          "raw": "{\r\n  \"pedidoId\": 9,\r\n  \"statusPagamento\": \"APROVADO\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -285,6 +295,14 @@
             "pedidos"
           ]
         }
+      },
+      "response": []
+    },
+    {
+      "name": "Cadastrar Conta Cliente",
+      "request": {
+        "method": "GET",
+        "header": []
       },
       "response": []
     }
