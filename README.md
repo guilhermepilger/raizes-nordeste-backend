@@ -45,7 +45,6 @@ src/
  ├── controllers/
  ├── middlewares/
  ├── infrastructure/
- ├── routes/
 
 prisma/
  ├── schema.prisma
