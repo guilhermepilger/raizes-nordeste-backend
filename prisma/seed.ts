@@ -10,11 +10,8 @@ async function main() {
 
   const senhaCriptografada = await bcrypt.hash('senha123', 10);
 
-  await prisma.usuario.createMany({
-    data: [
-      { email: 'cliente@email.com', senha: senhaCriptografada, perfil: 'CLIENTE' },
-      { email: 'gerente@email.com', senha: senhaCriptografada, perfil: 'GERENTE' }
-    ]
+  await prisma.usuario.create({
+    data: { email: 'gerente@email.com', senha: senhaCriptografada, perfil: 'GERENTE' }
   });
 
   await prisma.produto.createMany({
