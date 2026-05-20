@@ -1,10 +1,17 @@
-#PROJETO: Desenvolvimento Backend
+# Raízes do Nordeste - MVP Backend
 
-O projeto foi desenvolvido para o trabalho da disciplina PROJETO: Desenvolvimento Back-end com foco no backend do sistema de pedidos do restaurante Raízes do Nordeste.
+## Sobre o Projeto
 
-O sistema permite criar pedidos no app ifood e no totem, realizar autenticação de usuários e atualizar o status dos pedidos conforme o andamento do pedido, foram adicionadas validações de acesso para rotas administrativas e integração com uma simulação de gateway de pagamento.
+Projeto desenvolvido para a disciplina PROJETO: Desenvolvimento Back-end, com foco na criação de uma API para gerenciamento de pedidos do restaurante Raízes do Nordeste.
 
-Tecnologias utilizadas:
+O sistema permite autenticação de usuários, criação de pedidos multicanal, atualização de status dos pedidos e integração com um gateway de pagamento mock para simulação de pagamentos aprovados e recusados.
+
+O projeto foi desenvolvido considerando o fluxo principal do MVP da aplicação.
+
+---
+
+## Tecnologias Utilizadas
+
 - Node.js
 - TypeScript
 - Express
@@ -12,36 +19,34 @@ Tecnologias utilizadas:
 - SQLite
 - JWT
 - BcryptJS
-- Swagger (com auto-gen)
-  
-Escolhi utilizar SQLite por ser mais simples e leve para rodar localmente e facilitar os testes do MVP.
+- Swagger/OpenAPI
+- Postman
 
-Estrutura do projeto:
-O projeto foi dividido em algumas pastas principais:
-- `src/controllers` Controllers das rotas e regras dos pedidos.
-- `src/middlewares`Middlewares de autenticação e permissões.
-- - `src/infrastructure`Configuração do Prisma Client.
-- - `prisma`schema do banco, migrations e seed.
+O SQLite foi utilizado por ser uma solução simples e leve para execução local do MVP e realização dos testes da aplicação.
 
-## Como executar
-Instalar dependências:
-```bash
-npm install
-```
-Executar migrations:
-```bash
-npx prisma migrate dev
-```
-Executar seed:
-```bash
-npx prisma db seed
-```
-Iniciar projeto:
-```bash
-npm run dev
-```
-A aplicação vai iniciar na porta `3000`.
+---
 
-testes:
-O postman com os teste está na raiz do projeto
-Ela contém cenários de sucesso e alguns testes de validação de autenticação e permissão.
+## Funcionalidades
+
+- Autenticação JWT
+- Controle de acesso por perfil
+- Criação de pedidos
+- Registro de pedidos multicanal
+- Atualização de status dos pedidos
+- Simulação de pagamento mock
+- Documentação Swagger/OpenAPI
+
+---
+
+## Estrutura do Projeto
+
+```text
+src/
+ ├── controllers/
+ ├── middlewares/
+ ├── infrastructure/
+ ├── routes/
+
+prisma/
+ ├── schema.prisma
+ ├── migrations/
