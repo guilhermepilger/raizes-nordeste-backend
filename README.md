@@ -49,6 +49,7 @@ src/
 prisma/
  ├── schema.prisma
  ├── migrations/
+```
 
 Como Executar o Projeto
 Instalar dependências
