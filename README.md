@@ -49,3 +49,42 @@ src/
 prisma/
  ├── schema.prisma
  ├── migrations/
+
+Como Executar o Projeto
+Instalar dependências
+npm install
+Executar migrations do Prisma
+npx prisma migrate dev
+Executar seed
+npx prisma db seed
+Iniciar aplicação
+npm run dev
+
+A aplicação será iniciada na porta 3000.
+
+Variáveis de Ambiente
+
+Criar um arquivo .env na raiz do projeto:
+
+DATABASE_URL="file:./dev.db"
+JWT_SECRET="segredo"
+Swagger/OpenAPI
+
+Após iniciar o projeto, a documentação da API poderá ser acessada em:
+
+http://localhost:3000/api-docs
+Testes
+
+A coleção Postman utilizada nos testes encontra-se disponível na raiz do projeto.
+
+Ela contém cenários de:
+
+autenticação
+criação de pedidos
+validação de permissões
+pagamento mock
+testes de erro 401, 403 e 404
+Autor
+
+Guilherme Pilger
+Projeto acadêmico desenvolvido para disciplina de Desenvolvimento Back-end.
